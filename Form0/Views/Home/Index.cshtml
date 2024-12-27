@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Enter User Name: @Html.TextBox("username")
+        @Html.ValidationMessage("username")
+    </p>
+    <p>
+        Enter User Age: @Html.TextBox("age")
+        @Html.ValidationMessage("age")
+    </p>
+    <p>
+        Enter User Email: @Html.TextBox("email")
+        @Html.ValidationMessage("email")
+    </p>
+    <input type="submit" value="submit" />
+    @Html.Raw(@ViewData["SuccessMessage"])
+}
